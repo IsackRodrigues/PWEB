@@ -1,0 +1,52 @@
+*{
+    margin: 0%;
+}
+div.button{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: #222222;
+    margin-top: 0%;
+    height: 6em;
+}
+button#bt{
+    margin-top: 2%;
+    width: 10em;
+    height: 2em;
+}
+div.sp{
+    width: 10em;
+    height: 2em;
+}
+img.inicio{
+    height: 30em;
+    width: 100%;
+    left: 0%;
+    right: 0%;
+    margin-bottom: -0.3%;
+}
+div.column{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+div.E1{
+    height: 30em;
+    width: 100%;
+    left: 0%;
+    right: 0%;
+}
+div.text{
+    font-size: 15px;
+    font-family: sans-serif;
+    font-weight: 400;
+    float: right;
+    margin-right: 45%;
+    margin-top: 10%;
+}
+img.e-img{
+    height: 30em;
+    width: 15em;
+    margin: 5em;
+    float: left;
+}
