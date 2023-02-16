@@ -50,3 +50,78 @@ img.e-img{
     margin: 5em;
     float: left;
 }
+.wrapper{
+    height: 100%;
+    width: 300px;
+    position: relative;
+}
+.wrapper .menu-btn{
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    color: #fff;
+    height: 45px;
+    width: 45px;
+    z-index: 10000;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+#btn:checked ~ .menu-btn{
+    left: 247px;
+  }
+.wrapper .menu-btn i{
+    position: fixed;
+    font-size: 23px;
+    transition: all 0.3s ease;
+}
+  
+#btn:checked ~ .menu-btn i.fa-bars{
+    opacity: 0;
+    transform: rotate(180deg);
+}
+#sidebar{
+    position: fixed;
+    background: #000000;
+    height: 100%;
+    width: 270px;
+    overflow: hidden;
+    left: -270px;
+    transition: all 0.3s ease;
+}
+#btn:checked ~ #sidebar{
+    left: 0;
+}
+#sidebar .title{
+    opacity: 5;
+    line-height: 65px;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    font-size: 25px;
+    font-weight: 600;
+    border-bottom: 1px solid #222;
+}
+#sidebar .list-items{
+    position: relative;
+    background: #000000;
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    margin-top: 2rem;
+}
+  
+#sidebar .list-items li a{
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 500;
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+i{
+    font-size: 3rem;
+}
+  
