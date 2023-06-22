@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style-home.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EspotEnsina</title>
+    <script>
+        
+        //Menu
+        $(".main-nav ul li:has(ul)").addClass("submenu");
+        $(".main-nav ul li:has(ul)").append("<i></i>");
+        $(".main-nav ul i").click(function() {
+          $(this)
+            .parent("li")
+            .toggleClass("open");
+          $(this)
+            .parent("li")
+            .children("ul")
+            .slideToggle();
+        });
+    
+        //Menu Mobile
+        $(".mob-btn").click(function() {
+          if (!$("html").hasClass("show-menu")) {
+            $("html").addClass("show-menu");
+          } else {
+            $("html").removeClass("show-menu");
+          }
+        });
+    
+        $(".overlay").click(function() {
+          if ($("html").hasClass("show-menu")) {
+            $("html").removeClass("show-menu");
+          }
+        });
+    
+        //Aparecer addClass
+        $(".first ul")
+        
+          .clone()
+          .prependTo(".main-nav")
+          .addClass("desk-hide");
+    
+        $(".last ul")
+        
+          .clone()
+          .appendTo(".main-nav")
+          .addClass("desk-hide");
+    
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <input type="checkbox" id="btn" hidden>
+        <label for="btn" class="menu-btn">
+        <i><b>☰</b></i>
+        </label>
+        <nav id="sidebar">
+           <div class="title">
+              <img src="./img/logo.png" width="100px">
+           </div>
+           <ul class="list-items">
+              <li><a href="home.html">Pagina Inicial</a></li><br>
+              <li><a href="./Sobre.html">Sobre Nós</a></li><br>
+           </ul>
+        </nav>
+     </div>
+    <header>
+        <div class="menu">
+    
+            <nav class="main-nav">
+            
+              <ul>
+                
+                <li><a href="./Lojas.html" title="Home">Lojas</a></li>
+                
+                <li><a>Escola / Academias</a>
+                  <ul>
+                    <li><a href="./EscAcad.html#section1">Escola Social de Jiu-Jitsu</a></li>
+                    <li><a href="./EscAcad.html#section2">Associação Therion Fight Team</a></li>
+                    <li><a href="./EscAcad.html#section3">A.R. Team - André Ribeiro</a></li>
+                    <li><a href="./EscAcad.html#section4">Sesc</a></li>
+                </ul>
+                </li>
+                
+                <li><a>Esportes</a>
+                
+                    <ul>
+    
+                        <li><a href="#">🏃‍♂️</a>
+    
+                            <ul>
+                                <li><a href="https://www.infoescola.com/esportes/ciclismo/#:~:text=Ciclismo%20%C3%A9%20um%20esporte%20praticado,desse%20esporte%20e%20chamado%20ciclista.&text=Em%20uma%20competi%C3%A7%C3%A3o%20de%20ciclismo,o%20mesmo%20movimento%20diversas%20vezes">Ciclismo</a></li>
+                                <li><a href="https://blog.solo.ind.br/voce-conhece-a-historia-da-corrida-de-rua-descubra-aqui/">Corrida de Rua</a></li>
+                                <li><a href="https://www.todoestudo.com.br/educacao-fisica/corrida-de-revezamento">Corrida de revezamento</a></li>
+                            </ul>
+    
+                        </li>
+                        <li><a href="#">🥋</a>
+    
+                            <ul>
+                                <li><a href="https://www.todamateria.com.br/jiu-jitsu/">JiuJitsu</a></li>
+                                <li><a href="https://www.todoestudo.com.br/educacao-fisica/kung-fu#4">Kung Fu</a></li>
+                                <li><a href="https://www.esportelandia.com.br/artes-marciais/tudo-sobre-muay-thai/">Muay Thai</a></li>
+                            </ul>
+    
+                        </li>
+                        <li><a href="#">⚽ </a>
+                        
+                          <ul>
+                            <li><a href="https://www.todamateria.com.br/futsal/">Futsal</a></li>
+                            <li><a href="https://www.todamateria.com.br/voleibol/">Vôlei</a></li>
+                            <li><a href="https://www.todamateria.com.br/basquetebol/">Basquete</a></li>
+                          </ul>
+                        
+                        </li>
+                        
+                      
+                    </ul>
+    
+                </li>
+              
+              </ul>
+            
+            </nav>
+    
+            <div class="mob-btn">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+    
+            <div class="overlay"></div>
+          
+        </div>
+        <img class="inicio" src="./img/esp.jpg">
+    </header>
+    <div class="column">
+      <div class="row">
+        <div class="linha">
+            <a class="noticias" href="https://www.gov.br/esporte/pt-br/noticias-e-conteudos/esporte/mesp-participa-do-2o-encontro-estadual-dos-municipios-parceiros-do-sesi-atleta-do-futuro">
+            <img class="home-img" src="./img/mesp.jpeg" alt="">
+            <div class="text">MESP participa do 2º Encontro Estadual dos Municípios parceiros do Sesi Atleta do Futuro</div>
+            </a>
+        </div>
+        <div class="linha">
+            <a class="noticias" href="https://www.gov.br/esporte/pt-br/noticias-e-conteudos/esporte/conselho-nacional-do-esporte-cne-realiza-primeira-reuniao-do-ano-nesta-quinta-feira-25-05">
+            <img class="home-img" src="./img/cne.jpeg" alt="">
+            <div class="text">Conselho Nacional do Esporte (CNE) realiza primeira reunião do ano nesta quinta-feira (25.05)</div>
+            </a>
+        </div>
+        <div class="linha">
+          <a class="noticias" href="https://www.gov.br/esporte/pt-br/noticias-e-conteudos/esporte/ministerios-do-esporte-da-igualdade-racial-das-relacoes-exteriores-da-justica-e-dos-direitos-humanos-se-solidarizam-com-vinicius-junior-e-pedem-providencias-de-la-liga-e-do-governo-espanhol">
+          <img class="home-img" src="./img/mir.jpeg" alt="">
+          <div class="text">MEsp, MIR, MRE, MJSP e MDH se solidarizam com Vinícius Júnior, e pedem providências de La Liga e do governo espanhol</div>
+          </a>
+        </div>
+        <div class="linha">
+          <a class="noticias" href="https://www.gov.br/esporte/pt-br/noticias-e-conteudos/esporte/gleisi-hoffmann-e-ufpr-participam-de-audiencia-no-ministerio-do-esporte">
+          <img class="home-img" src="./img/gleisi.jpeg" alt="">
+          <div class="text">Gleisi Hoffmann e UFPR participam de audiência no Ministério do Esporte</div>
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="linha">
+            <a class="noticias" href="https://www.gov.br/esporte/pt-br/noticias-e-conteudos/esporte/deputado-jorge-solla-e-convidado-pelo-ministerio-do-esporte-para-falar-da-interacao-entre-saude-e-esporte">
+            <img class="home-img" src="./img/dep.jpeg" alt="">
+            <div class="text">Deputado Jorge Solla é convidado pelo ministério para falar da interação entre saúde e esporte</div>
+            </a>
+        </div>
+        <div class="linha">
+            <a class="noticias" href="https://www.gov.br/esporte/pt-br/noticias-e-conteudos/esporte/parlamentar-de-rondonia-visita-o-ministerio-do-esporte-e-conhece-programas">
+            <img class="home-img" src="./img/parl.jpeg" alt="">
+            <div class="text">Parlamentar de Rondônia visita Ministério do Esporte e conhece programas</div>
+            </a>
+        </div>
+        <div class="linha">
+          <a class="noticias" href="https://www.gov.br/esporte/pt-br/noticias-e-conteudos/esporte/mesp-reforca-interesse-do-governo-em-debater-o-tema-dos-jogos-eletronicos-durante-participacao-em-audiencia-publica-na-camara">
+          <img class="home-img" src="./img/ref.jpeg" alt="">
+          <div class="text">MEsp reforça na Câmara interesse do governo em debater jogos eletrônicos</div>
+          </a>
+        </div>
+        <div class="linha">
+          <a class="noticias" href="https://www.gov.br/esporte/pt-br/noticias-e-conteudos/esporte/ataques-racistas-sofridos-pelo-atleta-brasileiro-vinicius-junior">
+          <img class="home-img" src="./img/not.png" alt="">
+          <div class="text">Ataques racistas sofridos pelo atleta brasileiro Vinícius Júnior</div>
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="linha">
+            <a class="noticias" href="https://www.gov.br/esporte/pt-br/noticias-e-conteudos/esporte/edital-do-segundo-tempo-sera-lancado-em-25-de-maio-com-novas-diretrizes-para-trienio-2023-2026">
+            <img class="home-img" src="./img/edi.jpeg" alt="">
+            <div class="text">Edital do Segundo Tempo será lançado em 25 de maio, com novas diretrizes para o triênio 2023-2026</div>
+            </a>
+        </div>
+        <div class="linha">
+            <a class="noticias" href="https://www.gov.br/esporte/pt-br/noticias-e-conteudos/esporte/resultado-preliminar-do-edital-skate-por-lazer">
+            <img class="home-img" src="./img/skate.jpeg" alt="">
+            <div class="text">Resultado Preliminar do Edital Skate por Lazer</div>
+            </a>
+        </div>
+        <div class="linha">
+          <a class="noticias" href="https://www.gov.br/esporte/pt-br/noticias-e-conteudos/esporte/ministerio-do-esporte-recebe-mocao-de-aplausos-do-governo-de-xanxere-pela-realizacao-historica-e-exitosa-do-1deg-torneio-internacional-de-futsal-feminino">
+          <img class="home-img" src="./img/fut.jpeg" alt="">
+          <div class="text">Ministério do Esporte recebe moção de aplausos de Xanxerê pelo 1° Torneio Internacional de Futsal Feminino</div>
+          </a>
+        </div>
+        <div class="linha">
+          <a class="noticias" href="https://www.gov.br/esporte/pt-br/noticias-e-conteudos/esporte/ministerio-do-esporte-moderniza-requisitos-minimos-obrigatorios-para-os-estadios-brasileiros-receberem-competicoes">
+          <img class="home-img" src="./img/futs.jpeg" alt="">
+          <div class="text">Ministério do Esporte moderniza requisitos mínimos obrigatórios para os estádios brasileiros receberem competições</div>
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="linha">
+            <a class="noticias" href="https://www.gov.br/esporte/pt-br/noticias-e-conteudos/esporte/ministerio-do-esporte-e-caixa-conversam-sobre-parceria-ampla-e-abrangente-para-massificar-o-esporte-no-pais">
+            <img class="home-img" src="./img/mini.jpeg" alt="">
+            <div class="text">Ministério do Esporte e Caixa conversam sobre parceria ampla e abrangente para massificar o esporte no país</div>
+            </a>
+        </div>
+        <div class="linha">
+            <a class="noticias" href="https://www.gov.br/esporte/pt-br/noticias-e-conteudos/esporte/ministerio-do-esporte-recebe-bancada-de-deputados-goianos-para-apresentar-programas-e-possiveis-parcerias">
+            <img class="home-img" src="./img/mini (1).jpeg" alt="">
+            <div class="text">Ministério do Esporte recebe bancada de deputados goianos para apresentar programas e possíveis parcerias</div>
+            </a>
+        </div>
+        <div class="linha">
+          <a class="noticias" href="https://www.gov.br/esporte/pt-br/noticias-e-conteudos/esporte/liga-feminina-de-basquete-apresenta-projetos-em-visita-ao-ministerio-do-esporte">
+          <img class="home-img" src="./img/mini (2).jpeg" alt="">
+          <div class="text">Liga Feminina de Basquete apresenta projetos em visita ao Ministério do Esporte</div>
+          </a>
+        </div>
+        <div class="linha">
+          <a class="noticias" href="https://www.gov.br/esporte/pt-br/noticias-e-conteudos/esporte/ministerio-do-esporte-cumpre-agenda-de-inauguracoes-e-parcerias-em-sergipe">
+          <img class="home-img" src="./img/mini (3).jpeg" alt="">
+          <div class="text">Ministério do Esporte cumpre agenda de inaugurações e parcerias em Sergipe</div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <footer class="main_footer container">
+    
+      <div class="content">
+  
+          <div class="colfooter">
+              
+              <h3 class="titleFooter"> Menu</h3>
+              
+              <ul>
+              
+                <li><a href="./home.html">Pagina Inicial</a></li>
+                <li><a href="./Sobre.html">Sobre Nos</a></li>
+              
+              </ul>
+  
+          </div>       
+  
+          <div class="colfooter">
+             
+             <h3 class="titleFooter"> Contato</h3>
+             <p><i class="icon icon-mail"></i> isackr785@gmail.com</p>
+             <p><i class="icon icon-phone"></i> 88 992818050</p>
+  
+          </div>
+  
+  
+          <div class="clear"></div>
+      
+      </div>
+  
+      <div class="main_footer_copy">
+          
+          <p class="m-b-footer"> EsportEnsina - 2023, todos os direitos reservados.</p> 
+          <p class="by">
+              <i class="icon icon-heart-3"></i> 
+              Desenvolvido por: 
+              <a href="https://www.instagram.com/sorriso_rodrigues/">Isack Rodriges da Silva</a>
+          </p>
+      
+      </div>
+  
+  </footer>
+</body>
+</html>
